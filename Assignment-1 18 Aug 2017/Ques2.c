@@ -18,7 +18,7 @@ int main(){
         scanf("%d",&a[i]);
         b[i] = 1;
     }
-
+    int max = 0;
     for(i=1;i<n;i++){
         for(j=0;j<i;j++){
             if(a[j]<a[i]){
@@ -27,8 +27,10 @@ int main(){
                     b[i] = k;
             }
         }
+        if(max<b[i])
+            max = b[i];
     }
-    printf("The length of the longest monotone increasing subsequence is: %d\n",b[n-1]);
+    printf("The length of the longest monotone increasing subsequence is: %d\n",max);
 
     return 0;
 }

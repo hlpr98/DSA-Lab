@@ -15,7 +15,7 @@
   *The base-2 complexity = log(x) to base 2
   *The base-3 complexity = 2(log(x) to base 3)
   *
-  *Hence upto certain small value ... base-3 id slower than base-2
+  *Hence upto certain small value ... base-3 is slower than base-2
  **/
 
 #include<stdio.h>

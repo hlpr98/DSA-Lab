@@ -31,6 +31,5 @@ int main(){
             max = b[i];
     }
     printf("The length of the longest monotone increasing subsequence is: %d\n",max);
-
     return 0;
 }

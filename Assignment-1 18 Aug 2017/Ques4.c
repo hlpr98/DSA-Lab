@@ -20,6 +20,22 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
+
+
+int power1(int a,int x){
+    int temp;
+    if(x==0)
+        return 1;
+    temp = power1(a,x/2);
+    if(x%2==0)
+        return temp*temp;
+    else if(x%2==1)
+        return temp*temp*a;
+    
+    return -1;
+
+}
 
 int power(int a,int x){
     int temp;
@@ -44,6 +60,13 @@ void main(){
     scanf("%d",&a);
     printf("Enter the exponent(i.e x): ");
     scanf("%d",&x);
-    int ans = power(a,x);
-    printf("The value of a^x is: %d\n",ans);
+    clock_t start = clock(),diff;
+    int ans1 = power(a,x);
+    diff = clock() - start;
+    printf("\nThe value of a^x in base 3: %d\nTime of Execution = %ld microseconds\n\n",ans1,diff);
+    start = clock();
+    int ans2 = power1(a,x);
+    diff = clock() - start;
+    
+    printf("The value of a^x in base 3: %d\nTime of Execution = %ld microseconds\n\n",ans2,diff);
 }

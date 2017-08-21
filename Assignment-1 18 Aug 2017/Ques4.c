@@ -10,8 +10,13 @@
   *             and so on...
   *Hence this tree has log(x) to base 3,
   *rather than log(x) to base 2, which is the
-  *case in base 2 evaluation. Hence this algorithm is faster.
-**/
+  *case in base 2 evaluation. 
+  *
+  *The base-2 complexity = log(x) to base 2
+  *The base-3 complexity = 2(log(x) to base 3)
+  *
+  *Hence upto certain small value ... base-3 id slower than base-2
+ **/
 
 #include<stdio.h>
 #include<stdlib.h>
